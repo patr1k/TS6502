@@ -5,68 +5,68 @@ import Register from "./Register";
 
 class CPU6502 {
     /** A Accumulator */
-    private A: Register;
+    private A: number;
 
     /** User Registers */
-    private X: Register;
-    private Y: Register;
+    private X: number;
+    private Y: number;
 
     /** Status Register */
-    private P: Register;
+    private P: number;
 
     /** Stack Pointer Register */
-    private S: Register;
+    private S: number;
 
     /** Temporary Register */
-    private T: Register;
+    private T: number;
 
     /** Program Counter (Low) */
-    private PCL: Register;
+    private PCL: number;
 
     /** Program Counter (High) */
-    private PCH: Register;
+    private PCH: number;
 
     /** Data Pointer (Low) */
-    private DPL: Register;
+    private DPL: number;
 
     /** Data Pointer (High) */
-    private DPH: Register;
+    private DPH: number;
 
     /** Direct Page Register */
-    private DH: Register;
+    private DH: number;
 
     /** Program Register */
-    private PBR: Register;
+    private PBR: number;
 
     /** Data Register */
-    private DBR: Register;
+    private DBR: number;
 
     /** Temporary Bank Register */
-    private TBR: Register;
+    private TBR: number;
 
     /** B Accumulator */
-    private B: Register;
+    private B: number;
 
     constructor(clk: Clock, mem: Memory) {
-        this.A = Register.Init();
-        this.X = Register.Init();
-        this.Y = Register.Init();
-        this.P = Register.Init();
-        this.S = Register.Init();
-        this.T = Register.Init();
-        this.PCL = Register.Init();
-        this.PCH = Register.Init();
-        this.DPL = Register.Init();
-        this.DPH = Register.Init();
-        this.DH = Register.Init();
-        this.PBR = Register.Init();
-        this.DBR = Register.Init();
-        this.TBR = Register.Init();
-        this.B = Register.Init();
+
     }
 
     public Reset() {
-
+        this.A = 0x00;
+        this.X = 0x00;
+        this.Y = 0x00;
+        this.P = 0x00;
+        this.S = 0x00;
+        this.T = 0x00;
+        this.PCL = 0xFF;
+        this.PCH = 0xFC;
+        this.DPL = 0x00;
+        this.DPH = 0x00;
+        this.DH = 0x00;
+        this.PBR = 0x00;
+        this.DBR = 0x00;
+        this.TBR = 0x00;
+        this.B = 0x00;
     }
 
     public Run() {

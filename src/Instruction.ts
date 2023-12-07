@@ -67,6 +67,14 @@ enum Instruction {
     LDX_IM = 0xA2,
 
     LDY_IM = 0xA0,
+
+    STA_ZP = 0x84,
+    STA_ZPX = 0x94,
+    STA_ABS = 0x8D,
+    STA_ABSX = 0x9D,
+    STA_ABSY = 0x99,
+    STA_INDX = 0x81,
+    STA_INDY = 0x91,
 }
 
 export default Instruction;

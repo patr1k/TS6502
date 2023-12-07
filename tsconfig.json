@@ -7,6 +7,7 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "outDir": "dist",
+        "strict": false,
         "resolveJsonModule": true,
         "emitDecoratorMetadata": true,
         "esModuleInterop": true,
